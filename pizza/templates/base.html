@@ -2,17 +2,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% if title %}
-    <title>Tatu-{{title}}</title>
-    {% else %}
-    <title>Tatu</title>
-    {% endif %}
-​
-    {% block styles %}
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {% if title %}
+        <title>Janice Pizza-{{title}}</title>
+        {% else %}
+        <title>Janice Pizza</title>
+        {% endif %}
+        ​
+        {% block styles %}
         {% bootstrap_css%}
 
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
@@ -21,39 +22,43 @@
         <link href="{% static  'js/index.js' %}" rel="stylesheet">
         <link href="{% static  'js/jquery3.4.1.js' %}" rel="stylesheet">
         <link href="{% static  'js/popper.min.js' %}" rel="stylesheet">
-        <link rel="icon" href= "{%static 'images/favicon.ico' %}" type="image/x-icon">
+        <link rel="icon" href="{%static 'images/favicon.ico' %}" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Pacifico|Oswald" rel="stylesheet">
-​
-    {% endblock styles %}
-</head>
-<body>
+        ​
+        {% endblock styles %}
+    </head>
 
-    {% include 'pizza/navbar.html'%}
- 
-​    {% block content %}
+    <body>
 
-        
-​
+        {% include 'navbar.html'%}
 
-​
-    {% endblock content %}
-</div>
-    {% block scripts %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    ​       
-    <!-- Bootstrap core JavaScript-->
-    
-    <!-- Core plugin JavaScript-->
-    
-    <!-- Custom scripts for all pages-->
-    
-    <!-- Custom scripts for all pages-->
+        ​ {% block content %}
 
-    {% bootstrap_javascript%}
-    <!-- <script src="{% static 'js/tatuadmin.js'%}"></script> -->
-​
-    {% endblock scripts %}
-​
-</body>
+
+        ​
+
+        ​
+        {% endblock content %}
+        </div>
+        {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        ​
+        <!-- Bootstrap core JavaScript-->
+
+        <!-- Core plugin JavaScript-->
+
+        <!-- Custom scripts for all pages-->
+
+        <!-- Custom scripts for all pages-->
+
+        {% bootstrap_javascript%}
+        <!-- <script src="{% static 'js/tatuadmin.js'%}"></script> -->
+        ​
+        {% endblock scripts %}
+        ​
+    </body>
+
 </html>
