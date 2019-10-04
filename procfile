@@ -1,0 +1,1 @@
+web: gunicorn janice.wsgi --log-file -
